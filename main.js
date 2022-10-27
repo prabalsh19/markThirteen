@@ -14,11 +14,29 @@ const validate = ()=>{
     console.log(listOfDate);
     const date = {day : listOfDate[2],month:listOfDate[1],year:listOfDate[0]}
     
-    const dateStr = date.month + date.day + date.year;
-    if(dateStr === reverseString(dateStr)){
-        result.innerHTML = "It is a Palindrome"
-    }else{
-        result.innerHTML = "It is not a Palindrome"
+    // const dateStr = date.month + date.day + date.year;
+
+    // if(dateStr === reverseString(dateStr)){
+    //     result.innerHTML = "It is a Palindrome"
+    // }else{
+    //     result.innerHTML = "It is not a Palindrome"
+    // }
+
+    const ddmmyy = date.day + date.month + date.year;
+    const mmddyy = date.month  +date.day + date.year;
+   const yymmdd = date.year + date.month + date.day;
+   const mmyydd = date.month + date.year + date.day;
+
+    const dateArray = [ddmmyy,mmddyy,yymmdd,mmyydd];
+
+    for (const d of dateArray){
+        if(d === reverseString(d)){
+            console.log(d,reverseString(d));
+            result.innerHTML = "It is a Palindrome"
+            break;
+        } else{
+            result.innerHTML = "It is not a Palindrome"
+        }
     }
 
 }
