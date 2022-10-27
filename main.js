@@ -14,13 +14,7 @@ const validate = ()=>{
     console.log(listOfDate);
     const date = {day : listOfDate[2],month:listOfDate[1],year:listOfDate[0]}
     
-    // const dateStr = date.month + date.day + date.year;
-
-    // if(dateStr === reverseString(dateStr)){
-    //     result.innerHTML = "It is a Palindrome"
-    // }else{
-    //     result.innerHTML = "It is not a Palindrome"
-    // }
+    
 
     const ddmmyy = date.day + date.month + date.year;
     const mmddyy = date.month  +date.day + date.year;
