@@ -16,12 +16,11 @@ const validate = ()=>{
     
     
 
-    const ddmmyy = date.day + date.month + date.year;
-    const mmddyy = date.month  +date.day + date.year;
-   const yymmdd = date.year + date.month + date.day;
-   const mmyydd = date.month + date.year + date.day;
-
-    const dateArray = [ddmmyy,mmddyy,yymmdd,mmyydd];
+    const ddmmyyyy = date.day + date.month + date.year;
+    const mmddyyyy = date.month  +date.day + date.year;
+    const ddmmyy = date.day + date.month + date.year.slice(-2)
+    
+    const dateArray = [ddmmyy,ddmmyyyy,mmddyyyy];
 
     for (const d of dateArray){
         if(d === reverseString(d)){
